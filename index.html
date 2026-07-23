@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azad Singh, PhD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --text-muted: #555555;
+            --link-color: #1e6c93;
+            --link-hover: #0056b3;
+            --border-color: #dddddd;
+            --font-family: 'Lato', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+        
+        .nav-bar {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            list-style: none;
+        }
+        
+        .nav-right {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-right a {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        .nav-right a:hover {
+            text-decoration: none;
+            opacity: 0.8;
+        }
+        
+        .nav-right .link-updates {
+            color: #0077b5;
+        }
+        
+        .nav-right .link-pubs {
+            color: #059669;
+        }
+        
+        .nav-bar .nav-name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        /* Profile Header */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile-photo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+        }
+
+        .profile-info h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .profile-info .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .action-buttons a {
+            display: inline-block;
+            padding: 6px 16px;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            background: transparent;
+            transition: opacity 0.2s;
+        }
+
+        .action-buttons a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+        
+
+        .btn-scholar { color: #4285F4; }
+        .btn-github { color: #24292e; }
+        .btn-linkedin { color: #0077b5; }
+        .btn-email { color: #d93025; }
+
+        /* About Text */
+        .about-text {
+            margin-bottom: 40px;
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2.sec-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        /* Updates List */
+        .updates-list {
+            list-style: none;
+        }
+
+        .update-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .update-date {
+            min-width: 90px;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .update-text {
+            flex: 1;
+        }
+
+        /* Publications */
+        .pub-item {
+            margin-bottom: 20px;
+        }
+        
+        .pub-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+        
+        .pub-authors {
+            color: var(--text-color);
+        }
+        
+        .pub-venue {
+            font-style: italic;
+            color: var(--text-muted);
+        }
+        
+        .pub-links {
+            font-size: 0.85rem;
+            margin-top: 3px;
+        }
+        
+        .pub-links a {
+            margin-right: 15px;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .update-item {
+                flex-direction: column;
+            }
+            .update-date {
+                margin-bottom: 3px;
+            }
+            .nav-tabs {
+                flex-wrap: wrap;
+            }
+            .action-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <ul class="nav-bar">
+            <li><span class="nav-name">Azad Singh</span></li>
+            <li class="nav-right">
+                <a href="#updates" class="link-updates">Updates</a>
+                <a href="publications.html" class="link-pubs">Publications</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="profile-header">
+            <div class="profile-photo">
+                <img src="profile.jpg" alt="Azad Singh">
+            </div>
+            <div class="profile-info">
+                <h1>Azad Singh</h1>
+                <p class="subtitle">
+                    Postdoc Researcher, Microsoft Research India<br>
+                    PhD IIT Jodhpur
+                </p>
+                <div class="action-buttons">
+
+                    <a href="https://scholar.google.com/citations?user=D0HlgOcAAAAJ&hl=en" class="btn-scholar" target="_blank">[Google Scholar]</a>
+                    <a href="https://github.com/agon07x" class="btn-github" target="_blank">[GitHub]</a>
+                    <a href="https://www.linkedin.com/in/azad-singh-phd-87775b19a/" class="btn-linkedin" target="_blank">[LinkedIn]</a>
+                    <a href="mailto:azadmehla01@gmail.com" class="btn-email">[Email]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-text">
+            <p>
+                Hello! I am a postdoc researcher at Microsoft Research, India where I work on the CARE (Clinically Aligned Radiology Expertise) project with <a href="https://www.microsoft.com/en-us/research/people/meranjit/" target="_blank">Mercy Ranjit</a>.
+            </p>
+            <p>
+                My research interests lie in medical image analysis, with a focus on self-supervised learning, multimodal representation learning, discrete representations, and grounding clinical concepts into learned models. I work on developing interpretable and robust methods for diverse medical data modalities&mdash;including 2D imaging, 3D imaging, radiology reports, and physiological signals. Currently, I am contributing to the CARE (Clinically Aligned Radiology Expertise) project at Microsoft Research India, working towards clinically aligned radiology AI systems.
+            </p>
+        </div>
+    </section>
+
+    <section id="updates">
+        <h2 class="sec-title">Updates</h2>
+        <ul class="updates-list">
+            <li class="update-item">
+                <div class="update-date">Jul 2026</div>
+                <div class="update-text">Joined <strong>Microsoft Research India</strong> as Postdoc Researcher.</div>
+            </li>
+            <li class="update-item">
+                <div class="update-date">Mar 2026</div>
+                <div class="update-text">
+                    <strong>Defended my PhD thesis</strong> on 16th March 2026! A heartfelt thanks to my advisor <a href="https://sites.google.com/iitj.ac.in/dmishra" target="_blank">Dr. Deepak Mishra</a> for his invaluable guidance throughout this journey. Grateful to my SRC committee&mdash;<a href="https://www.linkedin.com/in/richa-singh-40ba237/" target="_blank">Dr. Richa Singh</a>, <a href="https://anandmishra22.github.io/" target="_blank">Dr. Anand Mishra</a>, and <a href="https://sites.google.com/view/nil-kamal-hazra/home" target="_blank">Dr. Nil Kamal Hazra</a>&mdash;and my external examiners <a href="https://www.cse.iitb.ac.in/~suyash/" target="_blank">Dr. Suyash P. Awate</a> (IIT Bombay) and <a href="https://www.linkedin.com/in/andreas-maier-a6870b1a6/" target="_blank">Prof. Andreas Maier</a> (FAU Erlangen-N&uuml;rnberg) for their time and insights.
+                </div>
+            </li>
+            <li class="update-item">
+                <div class="update-date">Feb 2026</div>
+                <div class="update-text">Joined <strong>Microsoft Research India</strong> as PhD Research Intern—working on LLM-driven 3D medical segmentation.</div>
+            </li>
+            <li class="update-item">
+                <div class="update-date">2025</div>
+                <div class="update-text"><strong>Scale-Aware Adaptive Feature Quantization for Robust Medical Image Representation Learning</strong> accepted at ECAI (European Conference on Artificial Intelligence), Bologna, Italy. Oral presentation.</div>
+            </li>
+            <li class="update-item">
+                <div class="update-date">2025</div>
+                <div class="update-text"><strong>ViT Coupled Efficient CMOS Image Sensor with Sparse Acquisition and Patch Selection</strong> accepted at ISCAS (IEEE International Symposium on Circuits and Systems), London, UK.</div>
+            </li>
+            <li class="update-item">
+                <div class="update-date">2025</div>
+                <div class="update-text"><strong>Best Poster Runner-Up</strong>&mdash;Guide2Heart at ASMUS Workshop, MICCAI 2025, Daejeon.</div>
+            </li>
+            <li class="update-item">
+                <div class="update-date">2025</div>
+                <div class="update-text"><strong>OTCXR: Rethinking Self-supervised Alignment using Optimal Transport for Chest X-ray Analysis</strong> accepted at WACV (IEEE/CVF Winter Conference on Applications of Computer Vision), Tucson, Arizona.</div>
+            </li>
+            <li class="update-item">
+                <div class="update-date">2025</div>
+                <div class="update-text"><strong>Self-supervised Contextual Representations of Chest X-ray Images</strong> published in IEEE Signal Processing Letters.</div>
+            </li>
+
+            <li class="update-item">
+                <div class="update-date">2024</div>
+                <div class="update-text"><strong>CoBooM: Codebook Guided Bootstrapping for Medical Image Representation Learning</strong> accepted at MICCAI 2024, Morocco.</div>
+            </li>
+            <li class="update-item">
+                <div class="update-date">2024</div>
+                <div class="update-text"><strong>IDQCE: Instance Discrimination Learning through Quantized Contextual Embeddings for Medical Images</strong> accepted at ICPR 2024.</div>
+            </li>
+            <li class="update-item">
+                <div class="update-date">2024</div>
+                <div class="update-text"><strong>MLViCX: Multi-Level Variance-Covariance Exploration for Chest X-ray Self-Supervised Representation Learning</strong> published in IEEE Journal of Biomedical and Health Informatics.</div>
+            </li>
+            <li class="update-item">
+                <div class="update-date">2023</div>
+                <div class="update-text"><strong>Large Scale Time-Series Representation Learning via Simultaneous Low- and High-Frequency Feature Bootstrapping</strong> published in IEEE Transactions on Neural Networks and Learning Systems.</div>
+            </li>
+            <li class="update-item">
+                <div class="update-date">2022</div>
+                <div class="update-text"><strong>Branching Out for Better BYOL</strong> accepted at NeurIPS 2022 Workshop: Self-Supervised Learning - Theory.</div>
+            </li>
+        </ul>
+    </section>
+
+
+
+
+</div>
+
+<footer>
+    <div class="container">
+        &copy; 2026 Azad Singh
+    </div>
+</footer>
+
+</body>
+</html>

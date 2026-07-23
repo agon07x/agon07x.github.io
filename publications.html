@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Azad Singh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --text-muted: #555555;
+            --link-color: #1e6c93;
+            --link-hover: #0056b3;
+            --border-color: #dddddd;
+            --font-family: 'Lato', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6; font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: var(--link-color); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--link-hover); text-decoration: underline; }
+        .container { max-width: 850px; margin: 0 auto; padding: 0 20px; }
+        nav { margin-top: 30px; margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+        .nav-bar { display: flex; align-items: baseline; justify-content: space-between; list-style: none; }
+        .nav-right { display: flex; gap: 25px; }
+        .nav-right a { font-size: 0.95rem; font-weight: 600; }
+        .nav-right a:hover { text-decoration: none; opacity: 0.8; }
+        .nav-right .link-updates { color: #0077b5; }
+        .nav-right .link-pubs { color: #059669; }
+        .nav-bar .nav-name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem; font-weight: 700; color: #2c3e50; text-decoration: none;
+        }
+        h1.page-title {
+            font-size: 1.8rem; font-weight: 400; margin-bottom: 10px;
+            border-bottom: 2px solid var(--border-color); padding-bottom: 8px;
+        }
+        .page-subtitle { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px; }
+        .page-subtitle a { font-weight: 700; }
+        .search-section { margin-bottom: 30px; display: flex; gap: 15px; flex-wrap: wrap; align-items: center; }
+        .search-section input, .search-section select {
+            font-family: var(--font-family); font-size: 0.9rem; padding: 8px 14px;
+            border: 1px solid var(--border-color); border-radius: 4px; background: #f8f9fa; color: var(--text-color);
+        }
+        .search-section input { flex: 1; min-width: 200px; }
+        .search-section select { min-width: 120px; }
+        .search-section input:focus, .search-section select:focus { outline: none; border-color: var(--link-color); }
+        .year-group { margin-bottom: 30px; }
+        .year-header {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.3rem; font-weight: 700; color: #2c3e50;
+            margin-bottom: 15px; padding-bottom: 5px; border-bottom: 1px solid var(--border-color);
+        }
+        .pub-entry { margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #f0f0f0; }
+        .pub-entry:last-child { border-bottom: none; }
+        .pub-entry .pub-title { font-weight: 700; font-size: 1.05rem; color: var(--text-color); margin-bottom: 3px; }
+        .pub-entry .pub-title a { color: inherit; text-decoration: none; }
+        .pub-entry .pub-title a:hover { color: var(--link-color); text-decoration: underline; }
+        .pub-entry .pub-authors { color: var(--text-color); margin-bottom: 3px; }
+        .pub-entry .pub-authors .me { font-weight: 700; }
+        .pub-entry .pub-venue { font-style: italic; color: var(--text-muted); margin-bottom: 3px; }
+        .pub-entry .pub-badge {
+            display: inline-block; background: #059669; color: #fff;
+            font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 3px; margin-left: 6px;
+            font-style: normal;
+        }
+        .pub-entry .pub-links { margin-top: 5px; font-size: 0.85rem; }
+        .pub-entry .pub-links a { margin-right: 15px; font-weight: 700; }
+        .source-note { color: #999; font-size: 0.8rem; margin-bottom: 20px; font-style: italic; }
+        footer {
+            text-align: center; padding: 20px 0; color: var(--text-muted);
+            font-size: 0.85rem; border-top: 1px solid var(--border-color); margin-top: 40px;
+        }
+        @media (max-width: 600px) {
+            .nav-bar { flex-direction: column; gap: 10px; }
+            .search-section { flex-direction: column; }
+            .search-section input, .search-section select { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <ul class="nav-bar">
+            <li><a href="index.html" class="nav-name">Azad Singh</a></li>
+            <li class="nav-right">
+                <a href="index.html#updates" class="link-updates">Updates</a>
+                <a href="publications.html" class="link-pubs">Publications</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h1 class="page-title">Publications</h1>
+    <p class="page-subtitle">
+        For a full list, see my <a href="https://scholar.google.com/citations?user=D0HlgOcAAAAJ&hl=en" target="_blank">Google Scholar</a> profile.
+    </p>
+
+    <div class="search-section">
+        <input type="text" id="searchbar" placeholder="Search by title, author, venue...">
+        <select id="yearselector">
+            <option value="">All Years</option>
+        </select>
+    </div>
+
+    <div id="source-note"></div>
+    <div id="publications-list"></div>
+</div>
+
+<footer>
+    <div class="container">&copy; 2026 Azad Singh</div>
+</footer>
+
+<script>
+// ============================================================
+// Lightweight BibTeX Parser
+// Reads pubs.bib → parses entries → renders grouped by year
+// To add/update publications, just edit pubs.bib
+// ============================================================
+
+function parseBibtex(bibText) {
+    const entries = [];
+    let i = 0;
+    const len = bibText.length;
+
+    while (i < len) {
+        // Find next @
+        const atPos = bibText.indexOf('@', i);
+        if (atPos === -1) break;
+        i = atPos + 1;
+
+        // Read entry type (e.g. article, inproceedings)
+        let typeEnd = i;
+        while (typeEnd < len && bibText[typeEnd] !== '{') typeEnd++;
+        i = typeEnd + 1; // skip opening {
+
+        // Now read the full entry block, tracking brace depth
+        let depth = 1;
+        let blockStart = i;
+        while (i < len && depth > 0) {
+            if (bibText[i] === '{') depth++;
+            else if (bibText[i] === '}') depth--;
+            i++;
+        }
+        const block = bibText.slice(blockStart, i - 1); // content inside outer braces
+
+        // Parse fields from block
+        const entry = {};
+        let j = 0;
+        const blen = block.length;
+
+        // Skip the citation key (everything up to first comma)
+        while (j < blen && block[j] !== ',') j++;
+        j++; // skip comma
+
+        // Now parse key = {value} or key = "value" pairs
+        while (j < blen) {
+            // Skip whitespace and commas
+            while (j < blen && (block[j] === ' ' || block[j] === '\n' || block[j] === '\r' || block[j] === '\t' || block[j] === ',')) j++;
+            if (j >= blen) break;
+
+            // Read key
+            let keyStart = j;
+            while (j < blen && block[j] !== '=' && block[j] !== '\n') j++;
+            const key = block.slice(keyStart, j).trim().toLowerCase();
+            if (!key || block[j] !== '=') { j++; continue; }
+            j++; // skip =
+
+            // Skip whitespace
+            while (j < blen && (block[j] === ' ' || block[j] === '\t')) j++;
+
+            // Read value
+            let value = '';
+            if (j < blen && block[j] === '{') {
+                // Brace-delimited value — handle nested braces
+                j++; // skip opening {
+                let vDepth = 1;
+                let vStart = j;
+                while (j < blen && vDepth > 0) {
+                    if (block[j] === '{') vDepth++;
+                    else if (block[j] === '}') vDepth--;
+                    j++;
+                }
+                value = block.slice(vStart, j - 1).trim();
+            } else if (j < blen && block[j] === '"') {
+                j++; // skip opening "
+                let vStart = j;
+                while (j < blen && block[j] !== '"') j++;
+                value = block.slice(vStart, j).trim();
+                j++; // skip closing "
+            } else {
+                // Unquoted value (e.g. year = 2025)
+                let vStart = j;
+                while (j < blen && block[j] !== ',' && block[j] !== '\n') j++;
+                value = block.slice(vStart, j).trim();
+            }
+
+            if (key) entry[key] = value;
+        }
+
+        if (entry.title) entries.push(entry);
+    }
+    return entries;
+}
+
+function formatAuthors(authorStr) {
+    if (!authorStr) return '';
+    // BibTeX uses "Last, First and Last, First" format
+    const authors = authorStr.split(/\s+and\s+/);
+    return authors.map(a => {
+        const parts = a.trim().split(',').map(s => s.trim());
+        const name = parts.length > 1 ? parts[1] + ' ' + parts[0] : parts[0];
+        if (name.toLowerCase().includes('azad singh')) {
+            return '<span class="me">' + name + '</span>';
+        }
+        return name;
+    }).join(', ');
+}
+
+function entriesToPubs(entries) {
+    return entries.map(e => ({
+        title: (e.title || '').replace(/[{}]/g, ''),
+        authors: formatAuthors(e.author),
+        venue: e.journal || e.booktitle || '',
+        year: parseInt(e.year) || 0,
+        note: e.note || '',
+        url: e.url || ''
+    }));
+}
+
+// --- Rendering ---
+const container = document.getElementById('publications-list');
+const searchInput = document.getElementById('searchbar');
+const yearSelect = document.getElementById('yearselector');
+const sourceNote = document.getElementById('source-note');
+
+function renderPublications(pubs) {
+    const query = searchInput.value.toLowerCase();
+    const yearFilter = yearSelect.value;
+
+    const filtered = pubs.filter(p => {
+        const matchesSearch = !query ||
+            p.title.toLowerCase().includes(query) ||
+            p.authors.toLowerCase().includes(query) ||
+            p.venue.toLowerCase().includes(query);
+        const matchesYear = !yearFilter || p.year == yearFilter;
+        return matchesSearch && matchesYear;
+    });
+
+    const grouped = {};
+    filtered.forEach(p => {
+        if (!grouped[p.year]) grouped[p.year] = [];
+        grouped[p.year].push(p);
+    });
+
+    const sortedYears = Object.keys(grouped).sort((a, b) => b - a);
+
+    let html = '';
+    sortedYears.forEach(year => {
+        html += '<div class="year-group">';
+        html += '<div class="year-header">' + year + '</div>';
+        grouped[year].forEach(p => {
+            const noteHtml = p.note ? '<span class="pub-badge">' + p.note + '</span>' : '';
+            const titleHtml = p.url
+                ? '<a href="' + p.url + '" target="_blank" style="color:inherit;text-decoration:none;">' + p.title + '</a>'
+                : p.title;
+            html += '<div class="pub-entry">' +
+                '<div class="pub-title">' + titleHtml + noteHtml + '</div>' +
+                '<div class="pub-authors">' + p.authors + '</div>' +
+                '<div class="pub-venue">' + p.venue + ', ' + p.year + '</div>' +
+                '</div>';
+        });
+        html += '</div>';
+    });
+
+    container.innerHTML = html || '<p style="color:#999;">No publications found.</p>';
+}
+
+function setupFilters(pubs) {
+    const years = [...new Set(pubs.map(p => p.year))].sort((a, b) => b - a);
+    years.forEach(y => {
+        const opt = document.createElement('option');
+        opt.value = y; opt.textContent = y;
+        yearSelect.appendChild(opt);
+    });
+    searchInput.addEventListener('input', () => renderPublications(pubs));
+    yearSelect.addEventListener('change', () => renderPublications(pubs));
+}
+
+// --- Load pubs.bib via fetch, then render ---
+fetch('pubs.bib')
+    .then(res => {
+        if (!res.ok) throw new Error('Failed to load');
+        return res.text();
+    })
+    .then(bibText => {
+        const entries = parseBibtex(bibText);
+        const pubs = entriesToPubs(entries);
+        sourceNote.innerHTML = '<p class="source-note">Loaded from pubs.bib</p>';
+        setupFilters(pubs);
+        renderPublications(pubs);
+    })
+    .catch(() => {
+        // Fallback: if file:// protocol blocks fetch, show a helpful message
+        sourceNote.innerHTML = '<p class="source-note" style="color:#d93025;">' +
+            '⚠ Could not load pubs.bib (this happens when opening via file://). ' +
+            'To test locally, run: <code>python3 -m http.server</code> from the My_WebSite folder, ' +
+            'then open <a href="http://localhost:8000/publications.html">http://localhost:8000/publications.html</a></p>';
+    });
+</script>
+
+</body>
+</html>
