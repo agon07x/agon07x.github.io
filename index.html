@@ -193,6 +193,18 @@
             flex: 1;
         }
 
+        .badge-spotlight {
+            display: inline-block;
+            margin-left: 6px;
+            padding: 0 7px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #b45309;
+            border: 1px solid #f59e0b;
+            border-radius: 3px;
+            vertical-align: middle;
+        }
+
         /* Publications */
         .pub-item {
             margin-bottom: 20px;
@@ -288,10 +300,10 @@
 
         <div class="about-text">
             <p>
-                Hello! I am a postdoc researcher at Microsoft Research, India where I work on the CARE (Clinically Aligned Radiology Expertise) project with <a href="https://www.microsoft.com/en-us/research/people/meranjit/" target="_blank">Mercy Ranjit</a>.
+                Hello! I am a postdoc researcher at Microsoft Research India, where I work with <a href="https://www.microsoft.com/en-us/research/people/meranjit/" target="_blank">Mercy Ranjit</a> on foundation models for medical imaging. A central thread of my current work is <strong>AG-JEPA</strong> (Anatomically Guided Joint Embedding Predictive Architecture), a self-supervised framework that builds anatomical priors directly into representation learning. We are developing variants for chest X-ray analysis and for modelling neurodegenerative disease progression from brain MRI. I also contribute to the CARE (Clinically Aligned Radiology Expertise) project, which works towards clinically aligned radiology AI systems.
             </p>
             <p>
-                My research interests lie in medical image analysis, with a focus on self-supervised learning, multimodal representation learning, discrete representations, and grounding clinical concepts into learned models. I work on developing interpretable and robust methods for diverse medical data modalities&mdash;including 2D imaging, 3D imaging, radiology reports, and physiological signals. Currently, I am contributing to the CARE (Clinically Aligned Radiology Expertise) project at Microsoft Research India, working towards clinically aligned radiology AI systems.
+                My research interests lie in medical image analysis, with a focus on self-supervised and predictive representation learning, multimodal learning, discrete representations, and grounding clinical and anatomical concepts into learned models. I work on developing interpretable and robust methods for diverse medical data modalities&mdash;including 2D imaging, 3D imaging, radiology reports, and physiological signals.
             </p>
         </div>
     </section>
@@ -299,6 +311,10 @@
     <section id="updates">
         <h2 class="sec-title">Updates</h2>
         <ul class="updates-list">
+            <li class="update-item">
+                <div class="update-date">Oct 2026</div>
+                <div class="update-text"><strong>AG-JEPA: Anatomically Guided Joint Embedding Predictive Architecture for Neurodegenerative Representation Learning</strong> accepted at ML4H 2026 (Machine Learning for Health, Proceedings track), Sydney, Australia.<span class="badge-spotlight">Spotlight</span></div>
+            </li>
             <li class="update-item">
                 <div class="update-date">Jul 2026</div>
                 <div class="update-text">Joined <strong>Microsoft Research India</strong> as Postdoc Researcher.</div>
